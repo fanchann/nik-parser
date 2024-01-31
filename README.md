@@ -2,7 +2,7 @@
 
 ### installation
 ```sh
-go get github.com github.com/fanchann/nik-parser
+go get github.com/fanchann/nik-parser
 ```
 
 example:
