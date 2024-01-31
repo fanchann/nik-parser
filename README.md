@@ -44,7 +44,7 @@ import (
 )
 
 func main() {
-	nikOpts := &nikparser.NIKOpts{District: "BEKASI TIMUR", PostalCode: "17111",Ttl: 20}
+	nikOpts := &nikparser.NIKOpts{District: "Your District", PostalCode: "PostCode",Ttl: 20}
 	niks := nikparser.NIKGen(nikOpts)
 	fmt.Printf("niks: %v\n", niks)
 
