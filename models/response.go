@@ -2,10 +2,10 @@ package models
 
 type Response struct {
 	NIK        string `json:"nik"`
-	Gender     string `json:"kelamin"`
-	Province   string `json:"provinsi"`
-	City       string `json:"kotakab"`
-	District   string `json:"kecamatan"`
+	Gender     string `json:"gender"`
+	Province   string `json:"province"`
+	City       string `json:"city"`
+	District   string `json:"district"`
 	Uniqcode   string `json:"uniqcode"`
 	BornDay    int    `json:"born_day"`
 	BornMonth  int    `json:"born_month"`
