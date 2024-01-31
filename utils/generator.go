@@ -21,9 +21,9 @@ func GetRandomNumberFromModel(mapData map[string]string) string {
 
 func GenRandomBirth() string {
 	rand.Seed(time.Now().UnixNano())
-	dateInt := rand.Intn(29) + 1  // 31
-	monthInt := rand.Intn(12) + 1 // month
-	yearInt := rand.Intn(17) + 88 //  88,89,90,91,92,93,94,95,96,97,98,99,00,01,02,03,04
+	dateInt := rand.Intn(29+40) + 1 // 31
+	monthInt := rand.Intn(12) + 1   // month
+	yearInt := rand.Intn(17) + 88   //  88,89,90,91,92,93,94,95,96,97,98,99,00,01,02,03,04
 
 	result := fmt.Sprintf("%02d%02d%02d", dateInt, monthInt, yearInt)
 

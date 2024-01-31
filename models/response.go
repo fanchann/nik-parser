@@ -8,7 +8,7 @@ type Response struct {
 	District   string `json:"district"`
 	Uniqcode   string `json:"uniqcode"`
 	BornDay    int    `json:"born_day"`
-	BornMonth  int    `json:"born_month"`
+	BornMonth  string `json:"born_month"`
 	BornYear   int    `json:"born_year"`
 	PostalCode string `json:"postal_code"`
 }

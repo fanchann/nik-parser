@@ -2,6 +2,7 @@ package functions
 
 import (
 	"errors"
+	"fmt"
 	"strconv"
 	"strings"
 	"time"
@@ -21,7 +22,9 @@ type NIK struct {
 
 func (n *NIK) GetGender() string {
 	// check charactheristic gender by num in NIK
-	if len(n.NIKNumber[6:8]) > 40 {
+	isFemale, _ := strconv.Atoi(n.NIKNumber[6:8])
+	fmt.Println(isFemale)
+	if isFemale > 40 {
 		return "FEMALE"
 	}
 	return "MALE"

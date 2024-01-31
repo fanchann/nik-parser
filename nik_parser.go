@@ -3,6 +3,7 @@ package nikparser
 import (
 	"github.com/fanchann/nik-parser/functions"
 	"github.com/fanchann/nik-parser/models"
+	"github.com/fanchann/nik-parser/utils"
 )
 
 func ParseNIK(NIK string) (*models.Response, error) {
@@ -21,7 +22,7 @@ func ParseNIK(NIK string) (*models.Response, error) {
 		Uniqcode:   nik.GetUniqcode(),
 		Gender:     nik.GetGender(),
 		BornDay:    nik.GetBornDay(),
-		BornMonth:  nik.GetBornMonth(),
+		BornMonth:  utils.IntConvertToMonth(nik.GetBornMonth()),
 		BornYear:   nik.GetBornYear(),
 		PostalCode: nik.GetPostalCode(),
 	}
