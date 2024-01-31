@@ -6,6 +6,8 @@ go get github.com github.com/fanchann/nik-parser
 ```
 
 example:
+
+_nik_parser_.go
 ```go
 package main
 
@@ -27,6 +29,28 @@ func main() {
 	jsonByte, _ := json.Marshal(result)
 
 	fmt.Println(string(jsonByte))
+}
+```
+
+_nik_gen.go_
+
+```go
+package main
+
+import (
+	"fmt"
+
+	nikparser "github.com/fanchann/nik-parser"
+)
+
+func main() {
+	nikOpts := &nikparser.NIKOpts{District: "BEKASI TIMUR", PostalCode: "17111",Ttl: 20}
+	niks := nikparser.NIKGen(nikOpts)
+	fmt.Printf("niks: %v\n", niks)
+
+	jsonByte, _ := json.Marshal(&niks)
+
+	ioutil.WriteFile("nik.json", jsonByte, fs.ModePerm)
 }
 ```
 
